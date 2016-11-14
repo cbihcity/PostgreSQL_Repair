@@ -1,4 +1,4 @@
-package PostgreSQL_Repair;
+package PostgreSQL_Repair.PostgreSQL_Repair;
 
 import java.io.*;
 import java.sql.*;
@@ -10,7 +10,8 @@ import static java.util.Arrays.asList;
 
 /**
  * Created by i.Heldyieu on 31.10.2016.
- * Sometimes you can catch specific problem "invalid memory alloc request size" working with PostgreSQL. Therefore you cannot make backup
+ * Sometimes you can catch specific problem "invalid memory alloc request size" working with PostgreSQL.
+ * Therefore you cannot make backup
  * This utilite search these bad rows and try to delete them.
  */
 public class Fixer
@@ -50,7 +51,12 @@ public class Fixer
             while (!state)
             {
                 search.order.clear();
-                System.out.println("Choose table to repair:\n1 - fst_rcimages: "+rows.get(0)+" rows\n2 - fstpr_sh_intr: "+rows.get(1)+" rows\n3 - fstpr_us_intr: "+rows.get(2)+" rows\n4 - fstpr_http_post: "+rows.get(3)+" rows\n5 - all this tables");
+                System.out.println("Choose table to repair:" +
+                        "\n1 - fst_rcimages: "+rows.get(0)+" rows" +
+                        "\n2 - fstpr_sh_intr: "+rows.get(1)+" rows" +
+                        "\n3 - fstpr_us_intr: "+rows.get(2)+" rows" +
+                        "\n4 - fstpr_http_post: "+rows.get(3)+" rows" +
+                        "\n5 - all this tables");
                 String choice ="";
                 try
                 {

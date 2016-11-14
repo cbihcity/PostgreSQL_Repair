@@ -1,4 +1,4 @@
-package PostgreSQL_Repair;
+package PostgreSQL_Repair.PostgreSQL_Repair;
 
 import java.sql.*;
 import java.util.ArrayList;
